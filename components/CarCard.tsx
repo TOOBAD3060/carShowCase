@@ -10,7 +10,7 @@ interface CarCardProps {
   car : CarProps
 }
 const CarCard = ({car}: CarCardProps) => {
-    const {city_mpg,year,transmisson,drive,model,make}  = car
+    const {city_mpg,year,transmission,drive,model,make}  = car
 
     const [isOpen, setIsOpen] = useState(false)
     const carRent = calculateCarRent(city_mpg,year)
@@ -44,7 +44,7 @@ const CarCard = ({car}: CarCardProps) => {
               <Image src="/steering-wheel.svg" 
               width={20} height={20} alt='steering-wheel' />
               <p className='text-[14px]'>
-                {transmisson === 'a' ? 'Automatic' : 'Manual'}
+                {transmission === 'a' ? 'Automatic' : 'Manual'}
               </p>
             </div>
 
@@ -60,7 +60,7 @@ const CarCard = ({car}: CarCardProps) => {
               <Image src="/gas.svg" 
               width={20} height={20} alt='gas' />
               <p className='text-[14px]'>
-                {transmisson === 'a' ? 'Automatic' : 'Manual'}
+                {transmission === 'a' ? 'Automatic' : 'Manual'}
               </p>
             </div>
           </div>
