@@ -3,6 +3,7 @@ import CarCard from "@/components/CarCard";
 import CustomFilter from "@/components/CustomFilter";
 import Hero from "@/components/Hero";
 import SearchBar from "@/components/SearchBar";
+import { fuels, yearsOfProduction } from "@/constants";
 
 export default async function Home ({searchParams}) {
 
@@ -29,11 +30,11 @@ export default async function Home ({searchParams}) {
                <p>Explore the cars you might like</p> 
             </div>
 
-            <div className="home__filters"> 
+            <div className = "home__filters"> 
                 <SearchBar />
                 <div className="home__filter-container">
-                    <CustomFilter title="fuel" />
-                    <CustomFilter title="year" />
+                    <CustomFilter title="fuel" options= {fuels} />
+                    <CustomFilter title="year" options= {yearsOfProduction} />
                 </div>
             </div>
 

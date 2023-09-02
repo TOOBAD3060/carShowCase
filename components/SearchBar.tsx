@@ -16,6 +16,7 @@ const SearchButton = ({otherClasses} : {otherClasses : string}) => (
     </button>
 )
 
+
 const SearchBar = () => {
     const [manufacturer, setManufacturer] = useState('')
     const [model, setModel] = useState('');
@@ -41,6 +42,10 @@ const SearchBar = () => {
         } else {
           searchParams.delete('model')
         }
+
+      if(manufacturer){
+        searchParams.set('manufacturer', manufacturer)
+      }
 
         const newPathname  = `${window.location.pathname}?${searchParams.toString()}`
 
